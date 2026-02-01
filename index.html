@@ -76,36 +76,40 @@
   setInterval(showNextImage, 4000);
 </script>
 
+ 
+
+
+
  <script>
-  const slogans = [
-    "Luxury Branding",
-    "Premium Signboards",
-    "Rapid Delivery",
-    "Creative Innovation",
-    "Corporate Identity",
-    "Pan-India Expansion",
-    "Modern Designs",
-    "Elegant Interiors",
-    "Trusted Quality",
-    "LuxSign Studio"
+  const productImages = [
+    "images/product1.jpg",
+    "images/product2.jpg",
+    "images/product3.jpg",
+    "images/product4.jpg",
+    "images/product5.jpg",
+    "images/product6.jpg",
+    "images/product7.jpg",
+    "images/product8.jpg",
+    "images/product9.jpg",
+    "images/product10.jpg"
   ];
 
-  let index = 0;
-  const sliderText = document.getElementById("slider-text");
+  let currentIndex = 0;
+  const productImage = document.getElementById("product-image");
 
-  function showNextSlogan() {
-    sliderText.style.opacity = 0;
+  function showNextImage() {
+    productImage.style.opacity = 0;
     setTimeout(() => {
-      sliderText.textContent = slogans[index];
-      sliderText.style.opacity = 1;
-      index = (index + 1) % slogans.length;
+      currentIndex = (currentIndex + 1) % productImages.length;
+      productImage.src = productImages[currentIndex];
+      productImage.style.opacity = 1;
     }, 500);
   }
 
   // Initial call
-  showNextSlogan();
-  // Change slogan every 3 seconds
-  setInterval(showNextSlogan, 3000);
+  showNextImage();
+  // Change image every 4 seconds
+  setInterval(showNextImage, 4000);
 </script>
 
 
