@@ -2,10 +2,11 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5; /* Light luxury background */
-  color: #333; /* Dark text for readability */
+  color: #333;
   margin: 0;
   padding: 0;
 }
+
 
 /* Logo */
 .logo {
