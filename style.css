@@ -1,76 +1,45 @@
-body {
-    background-color: #111; /* Dark Premium Background */
-    color: #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    text-align: center;
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Luxury plain background */
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/* Logo Styling */
-.logo img {
-    width: 150px;
-    margin-top: 20px;
-    transition: transform 0.3s;
+/* Logo */
+.logo {
+  text-align: center;
+  margin-top: 15px;
 }
-.logo img:hover {
-    transform: scale(1.1);
+.logo img {
+  height: 60px;
+  cursor: pointer;
 }
 
 /* Header */
 header {
-    padding: 50px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-bg-image.jpg');
-    background-size: cover;
+  text-align: center;
+  padding: 20px;
+  color: #b8860b; /* Golden text */
 }
 
-header h1 {
-    font-size: 3rem;
-    color: #D4AF37; /* Gold Color */
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+/* Navigation */
+nav {
+  text-align: center;
+  margin: 20px;
+}
+nav a {
+  margin: 10px;
+  color: #b8860b;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: black;
 }
 
-header p {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #ccc;
-}
-
-/* Slider / Scrolling Text */
-/* Slider Container ko Center karne ke liye */
+/* Slogan Slider */
 .slider {
-    background: #D4AF37; /* Gold theme */
-    color: #000;
-    padding: 15px 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-    overflow: hidden;
-    position: relative; /* Overlap rokne ke liye */
-    width: 100%;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    display: flex;
-    align-items: center;
-}
-
-/* Sliding Animation */
-.slide-track {
-    display: flex;
-    width: calc(250px * 20); /* Slides ki total width */
-    animation: scroll 30s linear infinite;
-}
-
-.slide {
-    width: 25px;
-    padding: 0 20px;
-    text-align: center;
-    flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
- .slider {
   width: 100%;
   height: 200px;
   display: flex;
@@ -78,80 +47,20 @@ header p {
   justify-content: center;
   font-size: 28px;
   font-weight: bold;
-  color: #b8860b; /* Golden text */
+  color: #b8860b;
   margin: 30px auto;
 }
-
 #slider-text {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
 
-
-/* Baki section ko clean rakhne ke liye */
-header {
-    margin-bottom: 0; /* Slider ke saath chipkane ke liye */
-}
-
-nav {
-    margin-top: 0; /* Slider ke niche se start ho */
-}
-/* Navigation */
-nav {
-    margin: 30px 0;
-    background: #222;
-    padding: 15px;
-    border-top: 1px solid #D4AF37;
-    border-bottom: 1px solid #D4AF37;
-}
-
-nav a {
-    color: #f1f1f1;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #D4AF37;
-}
-
-/* Footer */
-footer {
-    padding: 40px 20px;
-    background: #000;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-footer p {
-    margin: 5px 0;
-}
-.slider {
-  width: 20%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
-  color: #b8860b; /* Golden text */
-  margin: 30px auto;
-}
-
-#slider-text {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
+/* Product Showcase Slider */
 .product-slider {
-  width: 40%;          /* 40% of screen */
-  margin: 40px auto;   /* center alignment */
+  width: 40%;
+  margin: 40px auto;
   text-align: center;
 }
-
 .product-slider img {
   width: 100%;
   height: auto;
@@ -160,4 +69,9 @@ footer p {
   transition: opacity 0.8s ease-in-out;
 }
 
-
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #b8860b;
+}
