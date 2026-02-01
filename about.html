@@ -1,70 +1,102 @@
  <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About LuxSign Studio</title>
+  <meta charset="UTF-8">
+  <title>LuxSign Studio</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin: 40px;
-      align-items: start;
-    }
-    .about-box {
-      background: #111;
-      padding: 20px;
-      border-radius: 8px;
-      color: gold;
-      text-align: left;
-      font-size: 18px;
-      line-height: 1.6;
-      transition: 0.3s;
-    }
-    .about-box:hover {
-      background: gold;
-      color: black;
-      cursor: pointer;
-    }
-    h1 {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 36px;
-      color: gold;
-    }
-  </style>
 </head>
 <body>
- 
- 
-</div>
 
-  <h1>About LuxSign Studio</h1>
-  <div class="about-container">
-    <div class="about-box">
-      <h2>✨ Who We Are</h2>
-      <p>LuxSign Studio is a premium signage and branding company based in Patna, delivering luxury corporate identity solutions across India. We specialize in ACP cladding, aluminum fabrication, and creative branding for offices and corporate spaces.</p>
-    </div>
-    <div class="about-box">
-      <h2>🎯 Our Mission</h2>
-      <p>To transform every office and corporate space into a symbol of prestige and professionalism. We aim to set new benchmarks in luxury signage and branding, ensuring speed, quality, and innovation in every project.</p>
-    </div>
-    <div class="about-box">
-      <h2>🌟 Our Vision</h2>
-      <p>To establish LuxSign Studio as a nationally recognized leader in premium corporate branding and signage, outshining competitors and becoming the first choice for businesses across India.</p>
-    </div>
-    <div class="about-box">
-      <h2>🤝 Our Values</h2>
-      <p>We believe in creativity, rapid execution, premium quality, and client-centric service. Every project is treated as a matter of honor, ensuring personalized solutions and luxurious outcomes.</p>
-    </div>
-    <div class="about-box">
-      <h2>⚡ How We Work</h2>
-      <p>Our workflow is rapid and stepwise: instant samples → client feedback → quick iteration → final delivery. This ensures clients get exactly what they want, without delays.</p>
-    </div>
-    <div class="about-box">
-      <h2>📈 Why Choose Us</h2>
-      <p>LuxSign Studio offers a complete package: premium design, fast delivery, nationwide service, and digital presence support. From physical signage to online branding, we cover it all.</p>
-    </div>
+  <!-- Branding (Logo + Heading side by side) -->
+  <div class="branding">
+    <a href="index.html">
+      <img src="logo.png" alt="LuxSign Studio Logo">
+    </a>
+    <h1>LUXSIGN STUDIO</h1>
   </div>
+
+  <!-- Tagline -->
+  <header>
+    <p>Premium Corporate Signage & Branding</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Product Showcase Slider -->
+  <div class="product-slider">
+    <img id="product-image" src="images/product1.jpg" alt="LuxSign Product Showcase">
+  </div>
+
+  <!-- Slogan Slider -->
+  <div class="slider">
+    <span id="slider-text"></span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 7488469374 | 📍 Patna | ✉️ luxsignstudio@gmail.com</p>
+    <p>&copy; 2026 LuxSign Studio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Product Showcase Slider
+    const productImages = [
+      "images/product1.jpg",
+      "images/product2.jpg",
+      "images/product3.jpg",
+      "images/product4.jpg",
+      "images/product5.jpg",
+      "images/product6.jpg",
+      "images/product7.jpg",
+      "images/product8.jpg",
+      "images/product9.jpg",
+      "images/product10.jpg"
+    ];
+    let productIndex = 0;
+    const productImage = document.getElementById("product-image");
+    function showNextImage() {
+      productImage.style.opacity = 0;
+      setTimeout(() => {
+        productIndex = (productIndex + 1) % productImages.length;
+        productImage.src = productImages[productIndex];
+        productImage.style.opacity = 1;
+      }, 500);
+    }
+    setInterval(showNextImage, 4000);
+
+    // Slogan Slider
+    const slogans = [
+      "Luxury Branding",
+      "Premium Signboards",
+      "Rapid Delivery",
+      "Creative Innovation",
+      "Corporate Identity",
+      "Pan-India Expansion",
+      "Modern Designs",
+      "Elegant Interiors",
+      "Trusted Quality",
+      "LuxSign Studio"
+    ];
+    let sloganIndex = 0;
+    const sliderText = document.getElementById("slider-text");
+    function showNextSlogan() {
+      sliderText.style.opacity = 0;
+      setTimeout(() => {
+        sliderText.textContent = slogans[sloganIndex];
+        sliderText.style.opacity = 1;
+        sloganIndex = (sloganIndex + 1) % slogans.length;
+      }, 500);
+    }
+    showNextSlogan();
+    setInterval(showNextSlogan, 3000);
+  </script>
+
 </body>
 </html>
