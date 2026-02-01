@@ -116,3 +116,20 @@ footer {
 footer p {
     margin: 5px 0;
 }
+.slider {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #b8860b; /* Golden text */
+  margin: 30px auto;
+}
+
+#slider-text {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
