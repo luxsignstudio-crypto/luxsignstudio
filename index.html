@@ -1,26 +1,24 @@
  <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>LuxSign Studio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-<!-- Logo -->
-<div class="logo">
-  <a href="index.html">
-    <img src="logo.png" alt="LuxSign Studio Logo">
-  </a>
-</div>
 
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="LuxSign Studio Logo">
+    </a>
+  </div>
 
   <!-- Header -->
   <header>
-    <h1>LuxSign Studio</h1>
+    <h1>LUXSIGN STUDIO</h1>
     <p>Premium Corporate Signage & Branding</p>
   </header>
- 
-
 
   <!-- Navigation -->
   <nav>
@@ -30,81 +28,75 @@
     <a href="contact.html">Contact</a>
   </nav>
 
- 
-<div class="product-slider">
-  <img id="product-image" src="images/product1.jpg" alt="LuxSign Product Showcase">
-</div>
+  <!-- Slogan Slider -->
+  <div class="slider">
+    <span id="slider-text"></span>
+  </div>
 
- 
+  <!-- Product Showcase Slider -->
+  <div class="product-slider">
+    <img id="product-image" src="images/product1.jpg" alt="LuxSign Product Showcase">
+  </div>
+
   <!-- Footer -->
   <footer>
     <p>📞 7488469374 | 📍 Patna | ✉️ luxsignstudio@gmail.com</p>
     <p>&copy; 2026 LuxSign Studio. All Rights Reserved.</p>
   </footer>
- 
-<script>
-  const productImages = [
-    "images/product1.jpg",
-    "images/product2.jpg",
-    "images/product3.jpg",
-    "images/product4.jpg",
-    "images/product5.jpg",
-    "images/product6.jpg",
-    "images/product7.jpg",
-    "images/product8.jpg",
-    "images/product9.jpg",
-    "images/product10.jpg"
-  ];
 
-  let currentIndex = 0;
-  const productImage = document.getElementById("product-image");
+  <!-- JavaScript -->
+  <script>
+    // Slogan Slider
+    const slogans = [
+      "Luxury Branding",
+      "Premium Signboards",
+      "Rapid Delivery",
+      "Creative Innovation",
+      "Corporate Identity",
+      "Pan-India Expansion",
+      "Modern Designs",
+      "Elegant Interiors",
+      "Trusted Quality",
+      "LuxSign Studio"
+    ];
+    let sloganIndex = 0;
+    const sliderText = document.getElementById("slider-text");
+    function showNextSlogan() {
+      sliderText.style.opacity = 0;
+      setTimeout(() => {
+        sliderText.textContent = slogans[sloganIndex];
+        sliderText.style.opacity = 1;
+        sloganIndex = (sloganIndex + 1) % slogans.length;
+      }, 500);
+    }
+    showNextSlogan();
+    setInterval(showNextSlogan, 3000);
 
-  function showNextImage() {
-    productImage.style.opacity = 0;
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % productImages.length;
-      productImage.src = productImages[currentIndex];
-      productImage.style.opacity = 1;
-    }, 500);
-  }
-
-  // Change image every 4 seconds
-  setInterval(showNextImage, 4000);
-</script>
-
- <script>
-  const slogans = [
-    "Luxury Branding",
-    "Premium Signboards",
-    "Rapid Delivery",
-    "Creative Innovation",
-    "Corporate Identity",
-    "Pan-India Expansion",
-    "Modern Designs",
-    "Elegant Interiors",
-    "Trusted Quality",
-    "LuxSign Studio"
-  ];
-
-  let index = 0;
-  const sliderText = document.getElementById("slider-text");
-
-  function showNextSlogan() {
-    sliderText.style.opacity = 0;
-    setTimeout(() => {
-      sliderText.textContent = slogans[index];
-      sliderText.style.opacity = 1;
-      index = (index + 1) % slogans.length;
-    }, 500);
-  }
-
-  // Initial call
-  showNextSlogan();
-  // Change slogan every 3 seconds
-  setInterval(showNextSlogan, 3000);
-</script>
-
-
+    // Product Showcase Slider
+    const productImages = [
+      "images/product1.jpg",
+      "images/product2.jpg",
+      "images/product3.jpg",
+      "images/product4.jpg",
+      "images/product5.jpg",
+      "images/product6.jpg",
+      "images/product7.jpg",
+      "images/product8.jpg",
+      "images/product9.jpg",
+      "images/product10.jpg"
+    ];
+    let productIndex = 0;
+    const productImage = document.getElementById("product-image");
+    function showNextImage() {
+      productImage.style.opacity = 0;
+      setTimeout(() => {
+        productIndex = (productIndex + 1) % productImages.length;
+        productImage.src = productImages[productIndex];
+        productImage.style.opacity = 1;
+      }, 500);
+    }
+    setInterval(showNextImage, 4000);
+  </script>
 
 </body>
 </html>
