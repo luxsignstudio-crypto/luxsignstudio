@@ -40,7 +40,6 @@ nav a:hover {
   color: black;
 }
 
-/* Slider */
 .slider {
   position: relative;
   width: 100%;
@@ -77,8 +76,8 @@ nav a:hover {
 @keyframes fade {
   0% { opacity: 0; }
   5% { opacity: 1; }
-  25% { opacity: 1; }
-  30% { opacity: 0; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
   100% { opacity: 0; }
 }
 
