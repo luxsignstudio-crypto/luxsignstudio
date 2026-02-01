@@ -1,125 +1,94 @@
- /* General Page Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Light luxury background */
-  color: #333;
-  margin: 0;
-  padding: 0;
+    background-color: #111; /* Dark Premium Background */
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-
-
-.logo {
-  text-align: center;
-  margin-top: 15px;
-}
+/* Logo Styling */
 .logo img {
-  height: 60px;
-  cursor: pointer;
+    width: 150px;
+    margin-top: 20px;
+    transition: transform 0.3s;
 }
-
+.logo img:hover {
+    transform: scale(1.1);
+}
 
 /* Header */
 header {
-  padding: 20px;
-  text-align: center;
-  color: #b8860b; /* Golden text */
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-bg-image.jpg');
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #D4AF37; /* Gold Color */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Slider / Scrolling Text */
+.slider {
+    background: #D4AF37;
+    color: #000;
+    padding: 10px 0;
+    font-weight: bold;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 /* Navigation */
 nav {
-  margin: 20px;
-  text-align: center;
+    margin: 30px 0;
+    background: #222;
+    padding: 15px;
+    border-top: 1px solid #D4AF37;
+    border-bottom: 1px solid #D4AF37;
 }
+
 nav a {
-  margin: 10px;
-  color: #b8860b;
-  text-decoration: none;
-  font-weight: bold;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
 }
+
 nav a:hover {
-  color: black;
+    color: #D4AF37;
 }
-
-..slider {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  margin: 30px auto;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 28px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-
-/* Sequential animation using nth-child */
-.slide:nth-child(1) { animation: fade 30s infinite; animation-delay: 0s; }
-.slide:nth-child(2) { animation: fade 30s infinite; animation-delay: 3s; }
-.slide:nth-child(3) { animation: fade 30s infinite; animation-delay: 6s; }
-.slide:nth-child(4) { animation: fade 30s infinite; animation-delay: 9s; }
-.slide:nth-child(5) { animation: fade 30s infinite; animation-delay: 12s; }
-.slide:nth-child(6) { animation: fade 30s infinite; animation-delay: 15s; }
-.slide:nth-child(7) { animation: fade 30s infinite; animation-delay: 18s; }
-.slide:nth-child(8) { animation: fade 30s infinite; animation-delay: 21s; }
-.slide:nth-child(9) { animation: fade 30s infinite; animation-delay: 24s; }
-.slide:nth-child(10) { animation: fade 30s infinite; animation-delay: 27s; }
-
-@keyframes fade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  25% { opacity: 1; }
-  30% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-
 
 /* Footer */
 footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  color: #b8860b;
-}
-/* Portfolio Page */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin: 40px;
+    padding: 40px 20px;
+    background: #000;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.card {
-  background: #f5f5f5; /* Light luxury background */
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Premium shadow effect */
-  transition: 0.3s;
+footer p {
+    margin: 5px 0;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.card a {
-  color: #b8860b; /* Golden text */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.card a:hover {
-  color: black;
-}
-
