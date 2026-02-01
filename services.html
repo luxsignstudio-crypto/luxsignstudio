@@ -1,12 +1,34 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <title>Our Services - LuxSign Studio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 40px;
+    }
+    .service {
+      background: #111;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 18px;
+      color: gold;
+      text-align: left;
+      transition: 0.3s;
+    }
+    .service:hover {
+      background: gold;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <h1>Our Services</h1>
-  <div class="services">
+  <div class="services-grid">
     <div class="service">✨ ACP Cladding – Premium aluminum composite panel finishing for modern offices.</div>
     <div class="service">🔧 Aluminum Fabrication – Strong and durable structures for signage frames.</div>
     <div class="service">🏢 Luxury Signboards – Elegant designs with gold and black themes.</div>
@@ -49,4 +71,3 @@
   </div>
 </body>
 </html>
-
