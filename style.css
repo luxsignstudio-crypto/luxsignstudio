@@ -7,14 +7,12 @@
 }
 
 /* Logo */
-.logo {
-  text-align: left;
-  margin-top: 15px;
-}
-.logo img {
-  height: 60px;
-  cursor: pointer;
-}
+<div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="LuxSign Studio Logo">
+  </a>
+</div>
+
 
 /* Header */
 header {
