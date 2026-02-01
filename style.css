@@ -8,7 +8,6 @@ body {
 }
 
 
-/* Logo */
 .logo {
   text-align: center;
   margin-top: 15px;
@@ -17,6 +16,7 @@ body {
   height: 60px;
   cursor: pointer;
 }
+
 
 /* Header */
 header {
