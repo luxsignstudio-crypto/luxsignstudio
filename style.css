@@ -133,3 +133,18 @@ footer p {
   transition: opacity 0.8s ease-in-out;
 }
 
+.product-slider {
+  width: 40%;          /* 40% of screen */
+  margin: 40px auto;   /* center alignment */
+  text-align: center;
+}
+
+.product-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.8s ease-in-out;
+}
+
+
