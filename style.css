@@ -13,17 +13,53 @@
   justify-content: center;
   margin: 20px 0;
 }
+
 .branding img {
-  height: 60px;
+  height: 40px;   /* default size */
   margin-right: 15px;
   cursor: pointer;
 }
+
 .branding h1 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   color: #b8860b; /* Golden heading */
   margin: 0;
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .branding img {
+    height: 35px;
+  }
+  .branding h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .branding {
+    flex-direction: column; /* logo upar, heading niche */
+  }
+  .branding img {
+    height: 30px;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .branding h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .branding img {
+    height: 25px;
+  }
+  .branding h1 {
+    font-size: 18px;
+  }
+}
+
 
 /* Header (Tagline) */
 header {
