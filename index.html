@@ -49,5 +49,37 @@
     <p>📞 7488469374 | 📍 Patna | ✉️ luxsignstudio@gmail.com</p>
     <p>&copy; 2026 LuxSign Studio. All Rights Reserved.</p>
   </footer>
+ <script>
+  const slogans = [
+    "Luxury Branding",
+    "Premium Signboards",
+    "Rapid Delivery",
+    "Creative Innovation",
+    "Corporate Identity",
+    "Pan-India Expansion",
+    "Modern Designs",
+    "Elegant Interiors",
+    "Trusted Quality",
+    "LuxSign Studio"
+  ];
+
+  let index = 0;
+  const sliderText = document.getElementById("slider-text");
+
+  function showNextSlogan() {
+    sliderText.style.opacity = 0;
+    setTimeout(() => {
+      sliderText.textContent = slogans[index];
+      sliderText.style.opacity = 1;
+      index = (index + 1) % slogans.length;
+    }, 500);
+  }
+
+  // Initial call
+  showNextSlogan();
+  // Change slogan every 3 seconds
+  setInterval(showNextSlogan, 3000);
+</script>
+
 </body>
 </html>
